@@ -15,9 +15,3 @@ senhas de todos os logins: 123456
 
 As senhas ficam no banco como hash (scrypt, via Werkzeug).
 
-## Como rodar
-
-1. Rode o schema.sql no banco.
-2. pip install -r requirements.txt
-3. python app.py
-4. Abra http://127.0.0.1:5000
