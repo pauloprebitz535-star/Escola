@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadê o Equipamento?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Cadê o Equipamento?</h1>
+  <div id="sessao" hidden><span id="quem"></span> <button id="sair" class="ghost">Sair</button></div>
+</header>
+<div id="aviso" role="status" hidden></div>
+
+<main id="login-view">
+  <section class="painel estreito">
+    <h2>Entrar</h2>
+    <label>E-mail <input id="l-email" type="email" value="aluno@escola.com"></label>
+    <label>Senha <input id="l-senha" type="password" value="123456"></label>
+    <button id="btn-login">Entrar</button>
+    <details>
+      <summary>Primeiro acesso? Criar conta de aluno</summary>
+      <label>Nome <input id="r-nome"></label>
+      <label>E-mail <input id="r-email" type="email"></label>
+      <label>Senha <input id="r-senha" type="password"></label>
+      <button id="btn-reg" class="ghost">Criar conta</button>
+    </details>
+    <p class="dica">Contas de teste (senha 123456): admin@escola.com, gestor@escola.com, aluno@escola.com</p>
+  </section>
+</main>
+
+<main id="app-view" hidden>
+  <section class="painel">
+    <h2>Equipamentos</h2>
+    <table><thead><tr><th>Patrimônio</th><th>Nome</th><th>Categoria</th><th>Situação</th><th></th></tr></thead>
+    <tbody id="t-equip"></tbody></table>
+  </section>
+
+  <section class="painel" id="cad-equip" data-papel="admin">
+    <h2>Cadastrar equipamento</h2>
+    <div class="linha">
+      <input id="e-nome" placeholder="Nome (ex.: Projetor Epson)">
+      <input id="e-cat" placeholder="Categoria">
+      <input id="e-pat" placeholder="Nº patrimônio">
+      <button id="btn-equip">Cadastrar</button>
+    </div>
+  </section>
+
+  <section class="painel">
+    <h2 id="titulo-emp">Meus empréstimos</h2>
+    <table><thead><tr><th>#</th><th>Equipamento</th><th>Solicitante</th><th>Status</th><th></th></tr></thead>
+    <tbody id="t-emp"></tbody></table>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

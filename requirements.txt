@@ -1,0 +1,8 @@
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+PyMySQL==1.1.1
+cryptography==43.0.1
+PyJWT==2.9.0
+Werkzeug>=3.0.0
+sshtunnel==0.4.0
+paramiko<4

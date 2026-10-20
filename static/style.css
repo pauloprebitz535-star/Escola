@@ -1,0 +1,31 @@
+:root{--papel:#eceae4;--tinta:#1d2430;--aco:#2f4a63;--alerta:#f2b705;--ok:#2e7d4f;--erro:#b3322c;--linha:#c9c5ba}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font:16px/1.5 "Segoe UI",system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--aco);color:#fff;border-bottom:6px solid var(--alerta)}
+h1{margin:0;font-size:1.35rem;letter-spacing:.2px}
+h2{margin:0 0 12px;font-size:1.1rem}
+main{max-width:960px;margin:24px auto;padding:0 16px;display:grid;gap:20px}
+.painel{background:#fff;border:1px solid var(--linha);border-left:5px solid var(--aco);padding:18px 20px}
+.estreito{max-width:420px;margin:0 auto}
+label{display:block;margin-bottom:10px;font-weight:600;font-size:.92rem}
+input{display:block;width:100%;padding:8px 10px;margin-top:4px;border:1px solid var(--linha);font:inherit}
+input:focus,button:focus-visible,summary:focus-visible{outline:3px solid var(--alerta);outline-offset:1px}
+button{padding:8px 14px;border:0;background:var(--aco);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+button:hover{background:#243b50}
+button.ghost{background:transparent;color:inherit;border:1px solid currentColor}
+button.ok{background:var(--ok)} button.no{background:var(--erro)}
+.linha{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:10px}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--linha)}
+td:last-child{text-align:right;white-space:nowrap}
+td button{margin-left:6px;padding:4px 10px;font-size:.85rem}
+.tag{padding:2px 8px;font-size:.8rem;font-weight:700;background:#ddd}
+.disponivel,.aprovado,.devolvido{background:#d8eddf;color:var(--ok)}
+.emprestado,.negado{background:#f6d9d6;color:var(--erro)}
+.solicitado{background:#fbeeb8;color:#7a5c00}
+#aviso{position:fixed;top:70px;left:50%;transform:translateX(-50%);padding:10px 18px;color:#fff;font-weight:600;z-index:9;max-width:90vw}
+#aviso.erro{background:var(--erro)} #aviso.ok{background:var(--ok)}
+.dica{font-size:.8rem;color:#5a6270} details{margin:14px 0}
+summary{cursor:pointer;margin-bottom:8px}
+[hidden]{display:none!important}
+@media(max-width:640px){.linha{grid-template-columns:1fr}table{font-size:.85rem}}
