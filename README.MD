@@ -15,3 +15,4 @@ senhas de todos os logins: 123456
 
 As senhas ficam no banco como hash (scrypt, via Werkzeug).
 
+.
